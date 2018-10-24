@@ -4,7 +4,7 @@
 #SBATCH --mem=32000M        # memory per node
 #SBATCH --time=0-00:10      # time (DD-HH:MM)
 #SBATCH --output=%N-%j.out  # %N for node name, %j for jobID
-#SBATCH --mail-user=pkiri056@uottawa.ca
+#SBATCH --mail-user=xxxxx6@uottawa.ca
 #SBATCH --mail-type=ALL
 
 module load cuda cudnn python/3.6

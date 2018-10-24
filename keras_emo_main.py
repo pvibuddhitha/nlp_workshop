@@ -124,7 +124,6 @@ def evaluation(y_true, y_pred):
 
     cm = confusion_matrix(y_true=y_true, y_pred=y_pred,
                           labels=[0, 1, 2, 3])
-    print("confusion matrix:")
 
     cr = classification_report(y_true=y_true, y_pred=y_pred, target_names=[
         'fear', 'anger', 'sadness', 'joy'])
@@ -140,7 +139,7 @@ def evaluation(y_true, y_pred):
 if __name__ == '__main__':
     # set the printing options
     pd.set_option('display.max_colwidth', -1)
-    df = pd.read_csv(os.path.join(os.getcwd(), 'data/emotion_wassa_2017/df_cleaned_v02.csv'))
+    df = pd.read_csv(os.path.join(os.getcwd(), 'data/df_cleaned_v02.csv'))
     # pp_pre_emoemo: text after removing the emoji and emoticons
     # pp_pre_emopunc: text after removing the punctuations
     # all the special characters are replaced and not removed
