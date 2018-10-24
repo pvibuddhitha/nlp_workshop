@@ -1,0 +1,39 @@
+#to login
+ssh user_xxxx@graham.computecanada.ca
+
+#make sure to load the relevant python interpreter (this is to make sure that your virtual environment will be based on
+the particular python interpreter)
+
+module load python/3.6
+
+#creating the virtual environment
+virtualenv tfgpu
+
+#activating the virtual environment
+source ~/tfgpu/bin/activate
+
+#to exit the environment
+deactivate
+
+#loading modules (on temporary basis)
+source ~/tfgpu/bin/activate
+module load scipy-stack (installs: NumPy, SciPy, Matplotlib, dateutil, pytz, IPython, pyzmq, tornado, pandas, Sympy, nose)
+#installing sklearn
+pip install -U scikit-learn
+
+#installing tensorflow
+#make sure that you are inside the virtual environment (source ~/tfgpu/bin/activate
+pip install tensorflow_gpu
+
+#Listing available wheels
+avail_wheels --name "pandas"
+
+#check available modules
+module ava
+
+#List the wheels specifically for GPU and display only name, version, python columns:
+avail_wheels --column name version python --all_versions --name "*gpu"
+
+
+#get usage and help
+avail_wheels --help
