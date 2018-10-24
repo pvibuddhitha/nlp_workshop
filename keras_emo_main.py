@@ -197,9 +197,6 @@ if __name__ == '__main__':
     if numof_unique_tokens > len(word_index):
         max_words = len(word_index)
 
-    with open(os.path.join(os.getcwd(), 'embedding_matrix.pickle'), 'rb') as input_pickle:
-        embedding_matrix = pickle.load(input_pickle)
-
     x_train, y_train, x_val, y_val = data_sampling(data=data, labels=labels, n_splits=1, test_size=0.1)
     one_hot_train_labels = keras.utils.to_categorical(y_train, num_classes=4)
     one_hot_eval_labels = keras.utils.to_categorical(y_val, num_classes=4)
